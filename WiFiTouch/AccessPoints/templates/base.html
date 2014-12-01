@@ -1,0 +1,74 @@
+{%  load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head lang="pl">
+    <meta charset="UTF-8">
+
+    <title>{% block title_block %} BASE-TEMPLATE {% endblock %}</title>
+    <script src=" {% static 'js/jquery-2.0.0.js' %} " type="text/javascript"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link  href="{% static 'css/base.css' %} " rel="stylesheet">
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block add_header_link_block %} {% endblock %}
+</head>
+
+    <body>
+        <!-- Fixed navbar -->
+        {% block body_block %}
+     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container navbar-custom">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">WiBRIK</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            {% block menu_main_block %} <li><a href="{% url 'main' %}">MAIN</a></li>{% endblock %}
+            {% block menu_apiqueries_block %}<li><a href="{% url 'apiqueries' %}">APIQUERIES</a></li>{% endblock %}
+            {% block menu_routers_block %}<li><a href="{% url 'routers' %}">Routers</a></li>{% endblock %}
+            {% block menu_groups_block %}<li><a href="{% url 'groups' %}">Groups</a></li>{% endblock %}
+            {% block menu_network_profiles_block %}<li><a href="{% url 'network_profiles' %}">Network Profiles</a></li>{% endblock %}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container columns-main" style="margin-top: 50px" >
+            {% block top_messages_block %}
+                <div class="row top_messages_block">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div id="message-holder">
+                        {% if messages|length > 0 %}
+                            {% for alert in messages %}
+                                <div class="alert {{ alert.type }}" role="alert">{{ alert.msg }}</div>
+                            {% endfor %}
+                        {% else %}
+                            <!-- NO ALERTS  -->
+                        {% endif %}
+                    </div>
+                 </div>
+                <div class="col-md-2"></div>
+                </div>
+          {% endblock %}
+    <!-- modal place  start -->
+        {% include 'processing_modal.html' %}
+    <!-- modal place end -->
+        {% block second_container %}
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1>Hej</h1>
+            <p>To taki przykład jest!</p>
+            <a class="btn btn-lg btn-primary" href="{% url 'main' %}" role="button">Index &raquo;</a>
+
+       </div>
+       {% endblock %}
+
+    </div> <!-- /container -->
+
+    {% endblock %}
+
+    </body>
+</html>

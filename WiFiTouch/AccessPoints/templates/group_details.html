@@ -1,0 +1,84 @@
+{% load myfilters %}
+{% if group %}
+
+    <div class="panel panel-default">
+                <div class="panel-body"><p>Group: {{ group.name }}</p></div>
+
+                <!-- start GROUPS table -->
+                <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Security profile</button>
+                            <button type="button" class="btn btn-default">Wireless</button>
+                            <!-- Group picker - dropdown -->
+                            {% if network_profiles %}
+                            <!-- security profiles true -->
+                            <div class="btn-group" role="group">
+                              <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="security-profiles-picker" data-toggle="dropdown" aria-expanded="true">
+                                   Select security profile
+                                  <span class="caret"></span>
+                                </button>
+                                  <ul class="dropdown-menu" role="menu" aria-labelledby="security-profiles-picker">
+                                   {% for profile in network_profiles %}
+                                    <li
+                                      role="presentation">
+                                       <a
+                                         data-group_name="{{ group.name }}"
+                                         data-profile_name="{{ profile.name }}"
+                                         data-group="{{ group.pk }}"
+                                         data-profile="{{ profile.pk }}"
+                                         role="menuitem" tabindex="-1" onclick="selectNetworkProfile(this)">
+                                         {{ profile.name }}
+                                       </a>
+                                    </li>
+                                   {% endfor %}
+                                  </ul>
+                              </div>
+                            </div>
+                            {% endif %}
+                </div>
+                <br><br>
+                {% if router_set_list %}
+                    <table class="table table-bordered">
+                        <th>Router name</th><th>Management IP</th><th>Security profiles</th><th>WLANs</th>
+                        {% for router_set in router_set_list %}
+                        <tr>
+                            <td>{{ router_set.router.name }}</td>
+                            <td>{{ router_set.router.management_ip }}</td>
+                            <td>{% for sec_prof in router_set.security_profiles %}
+                                <p>{{ sec_prof.name }}</p>
+
+                                {% endfor %}
+                            </td>
+                            <td>{% for wlan in router_set.wlans %}
+                                <p><b>{{ wlan.name }}</b>
+                                    <br>
+                                    channel: {{ wlan.channel }}
+                                    <br>
+                                    ssid: {{ wlan.ssid }}
+                                    <br>
+                                    profile: {{ wlan|get_dot_key:"security-profile" }}
+                                </p>
+
+                                {% endfor %}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                <!-- end GROUPS  table -->
+            </div>
+
+    <div class="row">
+    <div class="col-md-8">
+
+
+    </div>
+    <div class="col-md-4">
+        <div id="loading-indicator" hidden="true">
+            <button type="button" class="btn btn-info" >
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                Running...
+            </button>
+        </div>
+    </div>
+    </div>
+{% endif %}

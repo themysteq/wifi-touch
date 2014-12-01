@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+        {% block title_block %} APIQUERIES {% endblock %}
+        {% block menu_apiqueries_block %}<li class="active"><a href="{% url 'apiqueries' %}">APIQUERIES</a></li>{% endblock %}
+
+{% block second_container %}
+        <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>Zapytania APIQuery - ich wyniki</h4>
+                </div>
+                    {% block left_column %}
+                    <table class="table table-condensed table-hover">
+                        <tr>
+                            <th>request_id</th>
+                            <th>created</th>
+                            <th>modified</th>
+                            <th>action_id</th>
+				<th>status</th>
+                        
+			</tr>
+                        {% for item in all_queries %}
+                            <tr {% if item.status == "OK" %} class="success" {% endif %} {% if item.status == "ERROR" %} class="danger" {% endif %}
+                                data-action_id="{{ item.action_id  }}" >
+                                <td>{{ item.request_id }}</td>
+                                <td>{{ item.created|date:"d-m-y  H:i:s:u" }}</td>
+                                <td>{{ item.modified|date:"d-m-y  H:i:s:u" }}</td>
+				                <td>{{ item.action_id  }}</td>
+                                <td>{{ item.status }}{% if item.status == "ERROR" %} ({{ item.response_body }}) {% endif %}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    {% endblock %}
+                </div>
+                </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#generalModal">
+                      SHOW MODAL
+                    </button>
+            </div>
+
+            <div class="col-md-6">
+                    {% include 'general_modal.html' %}
+            </div>
+        </div>
+{% endblock %}

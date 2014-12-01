@@ -1,0 +1,260 @@
+-   fields: {name: EA_1}
+    model: AccessPoints.routergroup
+    pk: 1
+-   fields: {name: EA_2}
+    model: AccessPoints.routergroup
+    pk: 2
+-   fields: {name: EA_KTI}
+    model: AccessPoints.routergroup
+    pk: 3
+-   fields: {name: NE_HOL}
+    model: AccessPoints.routergroup
+    pk: 4
+-   fields: {config: null, login: admin, management_ip: 192.168.10.200, name: rtr_1,
+        password: '', router_group: 3}
+    model: AccessPoints.router
+    pk: 1
+-   fields: {config: null, login: admin, management_ip: 192.168.10.201, name: rtr_2,
+        password: '', router_group: 3}
+    model: AccessPoints.router
+    pk: 2
+-   fields: {config: null, login: admin, management_ip: 192.168.10.200, name: rtr_3,
+        password: '', router_group: 3}
+    model: AccessPoints.router
+    pk: 3
+-   fields: {config: null, login: admin, management_ip: 192.168.10.202, name: rtr_4,
+        password: asdas, router_group: 4}
+    model: AccessPoints.router
+    pk: 4
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 17:30:33.775675+00:00',
+        request_id: f10a7e1b85d24e55b559d21bbe271a45, response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 16
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 17:30:33.778697+00:00',
+        request_id: dd1df6629cee19104b3ed3b69bd1cc0d, response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 17
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 17:30:36.613775+00:00',
+        request_id: 4d936eb366a919923d759e64db62ca6e, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 18
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 17:30:37.667870+00:00',
+        request_id: b0c217c89d739a69e8f5e202722a1fbf, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 19
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 17:31:46.927049+00:00',
+        request_id: 8d9b87fddb4d3cd7d5903d27581250dd, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 20
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 17:31:52.324375+00:00',
+        request_id: 7b81b917687ae6ba07b587087f9e6a57, response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 21
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 17:31:52.327212+00:00',
+        request_id: 9f1c047b1843579f45d910a0b1807c81, response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 22
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:10:17.245906+00:00',
+        request_id: eb4899c8725b522e963cbbb132bb941a, response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 23
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:10:17.250334+00:00',
+        request_id: 24f1c721ed29ba58624b6af3d1198207, response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 24
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:10:17.252413+00:00',
+        request_id: 4c99b6a63266fbe9ed85c48268421a99, response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 25
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:10:25.931117+00:00',
+        request_id: cdf9b654a65609af4b5c112741078b8d, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 26
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:10:49.088705+00:00',
+        request_id: da09696eb3039a524583ddbe0ae72333, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 27
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:11:09.224178+00:00',
+        request_id: 08344dddf19acfb75b5e2ea7ff122fe7, response_body: Network is unreachable,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 28
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:11:10.129482+00:00',
+        request_id: faa9ddaf543d1fea725565004ea6679a, response_body: Network is unreachable,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 29
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:13:34.781275+00:00',
+        request_id: 9ae69ce5330c0d0ee82e6b906c7df6eb, response_body: Network is unreachable,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 30
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:14:53.875529+00:00',
+        request_id: fb4e3499ea5d885abebba44462e02c1d, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 31
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 22:23:12.316514+00:00',
+        request_id: 6e1e5677b327334ddb304c811e2bedc1, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 32
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:07:33.039697+00:00',
+        request_id: 2f77a6b62406a9a70b2ccab7c32cb037, response_body: connection closed
+            by remote end, status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 33
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:16:34.588776+00:00',
+        request_id: a0f016772fe5f3fd03cb48488db534a3, response_body: '[{''content'':
+            {''message'': ''cannot log in''}, ''status'': ''ERROR'', ''length'': ''2''}]',
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 34
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:19:36.309063+00:00',
+        request_id: f545c23a800cddb7f7e3c3373309dfe2, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 35
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:24:25.743008+00:00',
+        request_id: 58fe0649c9ad373fdbe0977cc99066a8, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 36
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:24:36.259249+00:00',
+        request_id: 23fe69110920fd195e480d88c0595bb8, response_body: '[{''content'':
+            {''message'': ''cannot log in''}, ''status'': ''ERROR'', ''length'': ''2''}]',
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 37
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:25:04.043729+00:00',
+        request_id: 81e354618e671606673ac202bb856429, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 38
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:29:46.630214+00:00',
+        request_id: 5a94079cfab22407bff0f7a27a62c335, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 39
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:29:59.289959+00:00',
+        request_id: b705192e9936281e5f29a8bf1165a371, response_body: '[{''content'':
+            {''message'': ''cannot log in''}, ''status'': ''ERROR'', ''length'': ''2''}]',
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 40
+-   fields: {action_id: dupaosiem, created: ! '2014-10-30 23:36:25.321149+00:00',
+        request_id: 0df5af452ad65261494c449ca05390c7, response_body: cannot log in,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 41

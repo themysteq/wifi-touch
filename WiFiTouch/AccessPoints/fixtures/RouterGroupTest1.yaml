@@ -1,0 +1,3 @@
+-   fields: {name: KTI_lab}
+    model: AccessPoints.routergroup
+    pk: 5

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+        {% block title_block %} Routers {% endblock %}
+        {% block menu_routers_block %} <li class="active"><a href="{% url 'routers' %}">Routers</a></li>{% endblock %}
+
+
+    {% block second_container %}
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- top left column-->
+
+            <div class="panel panel-default">
+                <div class="panel-body"><p>Routers</p></div>
+
+                <!-- start router table -->
+                {% include 'routers_router.html' %}
+                <!-- end router table -->
+            </div>
+        </div>
+        <div class="col-md-6">
+
+            <!-- top right column -->
+            <p id="router-details-holder">SOME DATA</p>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- bottom left -->
+        </div>
+       <div class="col-md-6">
+        <div id="router-details-by-action-holder" >
+            ACTION HOLDER
+            <!-- uber holder -->
+        </div>
+           <!-- bottom right -->
+
+        </div>
+    </div>
+    {% endblock %}

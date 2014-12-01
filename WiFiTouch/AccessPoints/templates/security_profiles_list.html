@@ -1,0 +1,15 @@
+{% load myfilters %}
+{% if BODY %}
+    <p>status: {{ STATUS }} </p>
+    <p>length: {{ LENGTH }}</p>
+    <div class="row">
+
+    <div class="col-md-12">
+        {% for profile in BODY %}
+            <p>name: {{ profile.name }}<br>
+            key: {{  profile|get_dot_key:'wpa2-pre-shared-key'}}</p>
+
+        {% endfor %}
+    </div>
+    </div>
+{% endif %}

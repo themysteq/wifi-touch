@@ -1,0 +1,3 @@
+-   fields: {config_body: "test"}
+    model: AccessPoints.configuration
+    pk: 1

@@ -1,0 +1,42 @@
+-   fields: {name: EA_1}
+    model: AccessPoints.routergroup
+    pk: 1
+-   fields: {name: EA_2}
+    model: AccessPoints.routergroup
+    pk: 2
+-   fields: {name: EA_KTI}
+    model: AccessPoints.routergroup
+    pk: 3
+-   fields: {name: NE_HOL}
+    model: AccessPoints.routergroup
+    pk: 4
+-   fields: {config: null, login: admin, management_ip: 192.168.10.200, name: rtr_1,
+        password: '', router_group: 3}
+    model: AccessPoints.router
+    pk: 1
+-   fields: {config: null, login: admin, management_ip: 192.168.10.201, name: rtr_2,
+        password: '', router_group: 3}
+    model: AccessPoints.router
+    pk: 2
+-   fields: {config: null, login: admin, management_ip: 192.168.10.200, name: rtr_3,
+        password: '', router_group: 3}
+    model: AccessPoints.router
+    pk: 3
+-   fields: {config: null, login: admin, management_ip: 192.168.10.202, name: rtr_4,
+        password: asdas, router_group: 4}
+    model: AccessPoints.router
+    pk: 4
+-   fields: {action_id: dupaosiem, created: ! '2014-11-01 23:45:25.269417+00:00',
+        request_id: 455b1c1f101b96ef8cbbeed005339c16, response_body: '[{''content'':
+            [{''network'': ''192.168.11.0'', ''dynamic'': ''false'', ''.id'': ''*2'',
+            ''disabled'': ''false'', ''actual-interface'': ''ether1'', ''invalid'':
+            ''false'', ''address'': ''192.168.11.1/24'', ''interface'': ''ether1''},
+            {''network'': ''192.168.10.0'', ''dynamic'': ''false'', ''.id'': ''*5'',
+            ''disabled'': ''false'', ''actual-interface'': ''br0'', ''invalid'': ''false'',
+            ''address'': ''192.168.10.200/24'', ''interface'': ''br0''}, {''network'':
+            ''192.168.200.0'', ''dynamic'': ''false'', ''.id'': ''*6'', ''disabled'':
+            ''true'', ''actual-interface'': ''(unknown)'', ''invalid'': ''true'',
+            ''address'': ''192.168.200.1/24'', ''interface'': ''(unknown)''}], ''status'':
+            ''OK'', ''length'': ''4''}]', status: OK}
+    model: AccessPoints.apiquery
+    pk: 43

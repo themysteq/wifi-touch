@@ -1,0 +1,8 @@
+-   fields: {action_id: dupaosiem, created: '2014-11-01 23:45:25.269417+00:00',
+
+		modified: '2014-11-01 23:45:25.269417+00:00',
+ request_id: dd1df6629cee19104b3ed3b69bd1cc0d,
+		response_body: No route to host,
+        status: ERROR}
+    model: AccessPoints.apiquery
+    pk: 42

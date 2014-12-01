@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+        {% block title_block %} Groups {% endblock %}
+        {% block menu_groups_block %} <li class="active"><a href="{% url 'groups' %}">Groups</a></li>{% endblock %}
+
+
+    {% block second_container %}
+    <div class="row">
+        <div class="col-md-6">
+            <!-- top left -->
+        </div>
+       <div class="col-md-6">
+
+           <!-- top right -->
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5">
+            <!-- down left column-->
+
+            <div class="panel panel-default">
+                <div class="panel-body"><p>Groups</p></div>
+
+                <!-- start GROUPS table -->
+                {% if groups %}
+                    <table class="table table-bordered">
+                        <th>Group ID</th><th>Name</th><th>Routers</th><th></th>
+                        {% for gr in groups %}
+                        <tr>
+                            <td>{{ gr.pk }}</td>
+                            <td>{{ gr.name }}</td>
+                            <td>{{ gr.routers_count }}</td>
+                            <td>
+                               <button style="float: right" type="button"
+                                       class="btn btn-primary btn-xs group-details-btn"
+                                       data-group="{{ gr.pk }}">
+                                                                Details
+                                                                <span class="glyphicon glyphicon-chevron-right">
+                                                                </span>
+
+                               </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                <!-- end GROUPS  table -->
+            </div>
+        </div>
+        <div class="col-md-7">
+
+            <!-- down right column -->
+                <div id="group-details-holder" >
+                    GROUP DETAILS HOLDER
+                    <!-- uber holder -->
+                </div>
+
+        </div>
+
+
+    </div>
+    {% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+        {% block title_block %} Network Profiles {% endblock %}
+        {% block menu_network_profiles_block %} <li class="active"><a href="{% url 'network_profiles' %}">Network Profiles</a></li>{% endblock %}
+
+
+    {% block second_container %}
+        <div class="row">
+            <div class="col-md-4">
+                COL-MD-4
+            </div>
+
+            <div class="col-md-8">
+                <table class="table table-nonfluid">
+                    <th>Profile name</th><th>SSID</th><th>Channel</th><th>Key</th>
+                    {% for profile in profiles %}
+                    <tr>
+                        <td> {{ profile.name }}</td>
+                        <td> {{ profile.ssid }}</td>
+                        <td>{{ profile.channel }}</td>
+                        <td> {{ profile.key }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    {% endblock %}

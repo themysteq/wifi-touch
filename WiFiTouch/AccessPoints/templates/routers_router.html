@@ -1,0 +1,35 @@
+
+{% if routers %}
+   <!-- START routers true -->
+                <table class="table-responsive table">
+                <!-- START TABLE -->
+                        <th>Name</th><th>Group</th><th>Management IP</th><th></th>
+                        {% for router in routers %}
+                            <tr>
+                                <td>{{ router.name }}</td>
+                                <td>{{ router.router_group }}</td>
+                                <td>{{ router.management_ip }}</td>
+                                <td>
+                                    <button style="float: right" type="button"
+                                            class="btn btn-primary btn-xs router-detail-btn"
+                                            data-router="{{ router.pk }}">
+
+                                        Details
+
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+
+                                    </button>
+                                </td>
+                            </tr>
+
+                        {%  endfor %}
+
+
+
+
+                <!-- END TABLE -->
+                </table>
+    <!-- END routers true  -->
+{% endif %}
+
+

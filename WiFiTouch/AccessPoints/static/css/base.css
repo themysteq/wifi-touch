@@ -1,0 +1,29 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /*background-color: #B9C9ED;*/
+    background: #FFF2D9;
+}
+.columns-main{
+   background-color: #FFFCF6;
+    border-radius: 4px;
+
+}
+.navbar-custom{
+    background-color: #FFFCF6;
+}
+.top_messages_block{
+    padding: 10px 10px 10px 10px;
+}
+.routers-element{
+    padding-right: 10px;
+}
+.router-detail-btn{
+
+}
+.router-detail-action-btn{
+
+}
+.group-details-btn{
+
+}

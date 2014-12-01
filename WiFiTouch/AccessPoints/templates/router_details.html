@@ -1,0 +1,31 @@
+{% if router%}
+<div class="btn-group">
+  <button type="button" class="btn btn-default router-detail-action-btn"
+          data-command_key="if_print"
+          data-router="{{router.pk}}"
+          data-command_type="if_"
+          data-command_method="print">Interfaces</button>
+
+    <button type="button" class="btn btn-default router-detail-action-btn"
+          data-command_key="ip_addr_print"
+          data-router="{{router.pk}}"
+          data-command_type="ip_addr_"
+          data-command_method="print">IP addresses</button>
+
+    <button type="button" class="btn btn-default router-detail-action-btn"
+          data-command_key="sec_prof_print"
+          data-router="{{router.pk}}"
+          data-command_type="sec_prof_"
+          data-command_method="print">Security profiles</button>
+
+    <button type="button" class="btn btn-default router-detail-action-btn"
+
+          data-router="{{router.pk}}"
+          data-command_type="if_wireless_"
+          data-command_key="if_wireless_print"
+          data-command_method="print">Wireless interfaces</button>
+
+</div>
+{% else %}
+    <h4>No details :(</h4>
+{% endif %}

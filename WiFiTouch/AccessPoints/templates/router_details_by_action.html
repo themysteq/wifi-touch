@@ -1,0 +1,14 @@
+<!-- ### router_details_by_action  -->
+{% if content %}
+    {% include 'router_details_forms.html' %}
+{% else %}
+{% endif %}
+{% if status == "ERROR" %}
+   <script>
+        $('#message-holder').append('<div class="alert alert-danger" role="alert">' +
+                '<a href="#" class="close" data-dismiss="alert">&times;</a>' +
+                'NO TO LIPA PANIE! ({{ error }})</div>')
+
+   </script>
+{% endif %}
+<!--  router_details_by_action ### -->

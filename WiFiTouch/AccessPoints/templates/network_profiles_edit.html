@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+        {% block title_block %} Network Profiles {% endblock %}
+        {% block menu_network_profiles_block %} <li class="active"><a href="{% url 'network_profiles' %}">Network Profiles</a></li>{% endblock %}
+
+
+    {% block second_container %}
+        <div class="row">
+            <div class="col-md-4">
+                <form role="form">
+
+                   <div class="form-group">
+                    <label for="profile-name">profile name</label>
+                    <input type="text" name="profile-name" class="form-control" id="profile-name" placeholder="profile-name">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="network-ssid">network name</label>
+                    <input type="text" name="network-ssid" class="form-control" id="network-ssid" placeholder="ssid">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="network-key">network key</label>
+                    <input type="text" name="network-key" class="form-control" id="network-key" placeholder="network key">
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label for="network-channel">network channel</label>
+                    <select class="form-control" name="channel">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                    </select>
+                  </div>
+
+                  <button class="btn btn-default">Submit</button>
+                </form>
+            </div>
+
+            <div class="col-md-8">
+                COL-MD-8
+            </div>
+        </div>
+    {% endblock %}

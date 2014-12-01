@@ -1,0 +1,4 @@
+-   fields: {config: null, login: test, management_ip: 192.168.10.100, name: Test,
+        password: test, router_group: null}
+    model: AccessPoints.router
+    pk: 5

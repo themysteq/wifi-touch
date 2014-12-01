@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+        {% block title_block %}  {{ single_api_query.action_id }} - APIQUERIES {% endblock %}
+        {% block menu_apiqueries_block %}<li class="active"><a href="{% url 'apiqueries' %}">APIQUERIES</a></li>{% endblock %}
+
+{% block second_container %}
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <ol>
+            <li>{{ single_api_query.created }}
+            </li><li>{{ single_api_query.modified }}
+            </li><li>{{ single_api_query.request_id }}
+            </li><li>{{ single_api_query.status }}
+            </li><li>{{ single_api_query.response_body }}
+            </li>
+                <li>{{ single_api_query.action_id }}
+                </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
