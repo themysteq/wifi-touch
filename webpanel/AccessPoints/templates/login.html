@@ -6,9 +6,13 @@
 
             <div class="container">
 
-      <form class="form-signin" role="form" method="post" action="{% url 'login' %}" >
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
+      <form class="form-signin" role="form" method="post" action="{% url 'login_view' %}" >
+
+          <h2 class="form-signin-heading">Please sign in</h2>
+          {% if bad_login_or_password %}
+            <div class="alert alert-danger" role="alert">Bad login or password!</div>
+          {% endif %}
+          <input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
         <input type="password" class="form-control" placeholder="Password" name="password">
         <div class="checkbox">
           <label>

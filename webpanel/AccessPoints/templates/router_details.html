@@ -1,4 +1,11 @@
 {% if router%}
+        <div>
+    <!-- Router short info-->
+    <p>Group: <b> {{ router.router_group }}</b> <br>
+       Name: <b>{{ router.name }}</b><br>
+    </p>
+
+    </div>
 <div class="btn-group">
   <button type="button" class="btn btn-default router-detail-action-btn"
           data-command_key="if_print"
@@ -26,6 +33,7 @@
           data-command_method="print">Wireless interfaces</button>
 
 </div>
+
 {% else %}
     <h4>No details :(</h4>
 {% endif %}

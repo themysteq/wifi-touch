@@ -2,6 +2,7 @@
 
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -19,7 +20,7 @@ urlpatterns = patterns('',
     url(r'^apiqueries/action/$', 'AccessPoints.views.action_details'),
     url(r'^routers/$', 'AccessPoints.views.routers', name="routers"),
     url(r'^groups/$', 'AccessPoints.views.groups', name="groups"),
-    url(r'^login/$', 'AccessPoints.views.login', name="login"),
+    url(r'^login/$', 'AccessPoints.views.login_view', name="login_view"),
     url(r'^router/details/json/$', 'AccessPoints.views.router_details_json'),
     url(r'^router/details/$', 'AccessPoints.views.show_router_details'),
     url(r'^router/details/apply/$', 'AccessPoints.views.router_details_apply'),
@@ -29,9 +30,10 @@ urlpatterns = patterns('',
 
     url(r'^network_profiles/$', 'AccessPoints.views.network_profiles', name="network_profiles"),
     #url(r'^/router/details/(?P<router_pk>\d+)/$', 'AccessPoints.views.router_details', name="router_details"),
-
+    url(r'^logout/$', 'AccessPoints.views.logout_view', name='logout_view'),
 
     url(r'^debug/show/securityprofiles/(?P<router_pk>\d+)$', 'AccessPoints.views.showSecurityProfiles_debug'),
     url(r'^debug/show/wlans/(?P<router_pk>\d+)$', 'AccessPoints.views.showWLANs_debug'),
+
 
 )

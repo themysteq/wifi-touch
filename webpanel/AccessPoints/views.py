@@ -13,6 +13,11 @@ import django.core.exceptions
 from django.core import serializers
 import urlparse
 import logichelper
+from django.contrib.auth import authenticate, login
+from django.shortcuts import redirect
+from django.core.urlresolvers import reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 #from webhook import webhook
 logging.basicConfig(level=logging.INFO)
@@ -25,49 +30,77 @@ from django.core import exceptions
 import time
 
 
+
+
+@login_required
 def apiqueries_json(request):
     data = serializers.serialize('json', ApiQuery.objects.all().order_by('-modified'))
     return HttpResponse(data, 'application/json')
 
 
+@login_required
 def apiqueries(request):
     all_queries = ApiQuery.objects.all().order_by('-modified')
     return render(request, 'apiqueries.html', {'all_queries': all_queries})
 
 
+@login_required
 def routers(request):
     all_routers = Router.objects.all()
     return render(request, 'routers.html', {'routers': all_routers })
 
 
+@login_required
 def groups(request):
     groups = RouterGroup.objects.annotate(routers_count=Count('router'))
     return render(request, 'groups.html', {"groups": groups})
 
 
-def login(request):
+def login_view(request):
     logger = logging.getLogger(__name__)
     if request.method == 'POST':
-        data = {}
+        data = dict()
+        messages = list()
         data["username"] = request.POST['username']
         data["password"] = request.POST['password']
+        user = authenticate(username=data["username"], password=data["password"])
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                #redirect to success
+                msg = {"type": "alert-success", "msg": "Logged in successfully "}
+                messages.append(msg)
+                return redirect('/')
+            else:
+                #disabled account:
+                return HttpResponseNotFound("User disabled!")
+        else:
+            return render(request, 'login.html', {"bad_login_or_password": True})
+            #invalid login
+
         json_data = json.dumps(data)
         logger.debug(json_data)
 
-    return render(request, 'login.html', )
+    return render(request, 'login.html' )
 
 
+def logout_view(request):
+    logout(request)
+    return redirect('login_view')
+
+
+@login_required
 def main(request):
 
-    messages = []
+    messages = list()
     #msg = {"type":"alert-info","msg":"Heads up! This alert needs your attention, but it's not super important. "}
     #messages.append(msg)
     #msg = {"type":"alert-danger","msg":"Oh snap! Change a few things up and try submitting again. "}
     #messages.append(msg)
 
-    return render(request, 'index.html', {"messages": messages})
+    return render(request, 'index.html', {"messages": messages, })
 
-
+@login_required
 def router_details_json(request):
     response = {}
     router_pk = None
@@ -83,16 +116,17 @@ def router_details_json(request):
 
     return HttpResponse(json_response, 'application/json')
 
-
+@login_required
 def get_action(request):
     #tu cała reszta
     return HttpResponse("GET ACTION OK!")
 
-
+@login_required
 def set_action(request):
     #tu cala reszta
     return HttpResponse("SET ACTION OK!")
 
+@login_required
 def show_router_details(request):
 
     """ Metoda odpowiada za wyświetlenie widoku możliwych ustawien
@@ -104,11 +138,11 @@ def show_router_details(request):
         router_pk = request.GET.get('router_pk', None)
         router = Router.objects.get(pk=router_pk)
 
-    return render(request, 'router_details.html', {"router": router})
+    return render(request, 'router_details.html', {"router": router, })
 
 
 
-
+@login_required
 def show_router_details_by_action(request):
 
     """
@@ -177,7 +211,7 @@ def show_router_details_by_action(request):
         messages.append(msg)
         return render(request, 'router_details_by_action.html', {"error": response_body, "status": single_api_query.status, "messages":messages})
 
-
+@login_required
 def action_details(request):
     response = {}
     action_id = None
@@ -199,6 +233,8 @@ def action_details(request):
         logger.debug("single_api_query: %s", single_api_query)
         return render(request, 'action_details.html', {"single_api_query": single_api_query})
 
+
+@login_required
 def router_details_apply(request):
     logger = logging.getLogger(__name__)
     json_response = '["GET METHOD CALLED!"]'
@@ -225,6 +261,7 @@ def router_details_apply(request):
     return HttpResponse(json_response)
 
 
+@login_required
 def group_details(request):
     if request.method == "GET":
         query_dict = request.GET
@@ -257,12 +294,13 @@ def group_details(request):
     pass
 
 
-
+@login_required
 def network_profiles(request):
     profiles = NetworkProfile.objects.all()
     return render(request, 'network_profiles.html', {"profiles": profiles})
 
 
+@login_required
 def group_apply_profile(request):
     if request.method == "GET":
         qd = request.GET
@@ -282,6 +320,7 @@ def group_apply_profile(request):
 """ Debug section"""
 
 
+@login_required
 def showSecurityProfiles_debug(request, router_pk):
 
     logger = logging.getLogger(__name__)
@@ -307,6 +346,7 @@ def showSecurityProfiles_debug(request, router_pk):
         return render(request, 'security_profiles_list.html', response)
 
 
+@login_required
 def showWLANs_debug(request, router_pk):
     router = Router.objects.get(pk=router_pk)
     content = logichelper.b_getWLANs(router)

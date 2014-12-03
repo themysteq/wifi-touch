@@ -26,13 +26,18 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             {% block menu_main_block %} <li><a href="{% url 'main' %}">MAIN</a></li>{% endblock %}
-            {% block menu_apiqueries_block %}<li><a href="{% url 'apiqueries' %}">APIQUERIES</a></li>{% endblock %}
             {% block menu_routers_block %}<li><a href="{% url 'routers' %}">Routers</a></li>{% endblock %}
             {% block menu_groups_block %}<li><a href="{% url 'groups' %}">Groups</a></li>{% endblock %}
             {% block menu_network_profiles_block %}<li><a href="{% url 'network_profiles' %}">Network Profiles</a></li>{% endblock %}
+             {% block menu_apiqueries_block %}<li><a href="{% url 'apiqueries' %}">APIQUERIES</a></li>{% endblock %}
+            <li><a class="btn btn-link" role="button" href="{% url 'logout_view' %}">Logout: {% if user %}{{ user.username }}{% endif %}
+                    <span class="glyphicon glyphicon-log-out"/>
+                </a></li>
           </ul>
         </div><!--/.nav-collapse -->
+
       </div>
+
     </nav>
 
     <div class="container columns-main" style="margin-top: 50px" >
@@ -59,9 +64,9 @@
         {% block second_container %}
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
-            <h1>Hej</h1>
-            <p>To taki przykład jest!</p>
-            <a class="btn btn-lg btn-primary" href="{% url 'main' %}" role="button">Index &raquo;</a>
+            <h1>Hello!</h1>
+            <p>First step: add some routers to manage</p>
+            <a class="btn btn-lg btn-primary" href="{% url 'admin:index' %}" role="button">Admin Page &raquo;</a>
 
        </div>
        {% endblock %}

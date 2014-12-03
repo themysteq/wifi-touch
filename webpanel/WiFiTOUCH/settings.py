@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.core.urlresolvers import reverse_lazy
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -26,7 +27,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+LOGIN_URL = reverse_lazy('AccessPoints.views.login_view')
+LOGOUT_URL = reverse_lazy('AccessPoints.views.logout_view')
 # Application definition
 
 INSTALLED_APPS = (
